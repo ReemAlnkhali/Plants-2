@@ -1,0 +1,53 @@
+//
+//  SwiftUIView.swift
+//  Plants 2
+//
+//  Created by Reem Abdullah Alnkhali  on 18/04/1446 AH.
+//
+
+
+import SwiftUI
+
+struct Screen2: View {
+    var body: some View {
+        NavigationStack {
+         VStack(alignment: .center, spacing: -2.0) {
+                // Main content
+                Text("Plant name")
+                    .font(.largeTitle)
+                    .padding()
+            }
+         .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Set Reminder")
+            .toolbar {
+                // Toolbar item on the leading side
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        // Handle cancel action
+                        print("Cancel tapped")
+                    }) {
+                        Text("Cancel")
+                            .foregroundColor(Color("Color")) // Use your custom color
+                    }
+                }
+                
+                // Toolbar item on the trailing side
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // Handle save action
+                        print("Save tapped")
+                    }) {
+                        Text("Save")
+                            .foregroundColor(Color("Color"))
+                        }
+                        // Use your custom color
+                  
+                    }
+                }
+            }
+        }
+    }
+
+#Preview {
+    screen2()
+}
